@@ -83,6 +83,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *screenshot[] = { "bash", "/home/sayoss/scripts/screenshot.sh", NULL };
 static const char *librewolf[] = { "librewolf", NULL};
+static const char *thunar[] = { "thunar", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -90,6 +91,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ 0,                            XK_Print,  spawn,          {.v = screenshot } },
 	{ MODKEY,			XK_b,	   spawn,	   {.v = librewolf } },
+	{ MODKEY,			XK_e,	   spawn,	   {.v = thunar } },
 	{ MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
